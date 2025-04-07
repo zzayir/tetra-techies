@@ -7,6 +7,14 @@
   position: relative; /* Change from absolute to relative */
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    justify-content: flex-start;
+    min-height: auto;
+    padding-top: 40px;
+  }
+}
+
 .title {
   margin-top: 10px; /* Add margin to push "Sign In" down */
   font-size: 24px;
