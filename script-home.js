@@ -203,3 +203,25 @@ notificationStyles.textContent = `
     }
 `;
 document.head.appendChild(notificationStyles);
+
+// Add this JavaScript to handle dropdown toggle
+function toggleDropdown() {
+    const dropdown = document.getElementById('profileDropdown');
+    dropdown.classList.toggle('show');
+}
+
+// Close the dropdown if clicked outside
+window.onclick = function(event) {
+    if (!event.target.matches('.user-profile') && !event.target.closest('.user-profile')) {
+        const dropdowns = document.getElementsByClassName('profile-dropdown');
+        for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function logout() {
+    window.location.href = "login.html";}
