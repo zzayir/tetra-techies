@@ -591,3 +591,49 @@ td {
         overflow-x: auto;
     }
 }
+
+/* Add this CSS for the dropdown */
+.user-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.profile-dropdown a:hover {
+    background: #f5f5f5;
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+.logout-btn {   
+    color: #e74c3c;
+}
+
+.logout-btn i {
+    margin-right: 8px;
+}
