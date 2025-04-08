@@ -406,7 +406,7 @@
     <script>
       const AES_KEY = "rnb+hKFoQpJScaOrKarM3nfS5pzmHl2D";
       const EXPECTED_TEXT = "JBSWY3DPEHPK3PXP";
-      const ALLOWED_SERIAL_NUMBER = "00:04:0::05:07:0::05:04:0::05:02:0::0A:06:0::01:0C:0::09:00"; // Only this serial number will work
+      const ALLOWED_SERIAL_NUMBER = "00:04:0::03:05:0::05:05:0::05:02:0::0A:06:0::01:0C:0::09:00"; // Only this serial number will work
       
       // Valid backup codes
       const VALID_BACKUP_CODES = [
@@ -531,7 +531,7 @@
         const normalizedAllowed = normalizeSerialNumber(ALLOWED_SERIAL_NUMBER);
     
         if (normalizedSerial !== normalizedAllowed) {
-          statusEl.textContent = `❌ Access Denied: Invalid card (Serial: ${serialNumber || 'unknown'})`;
+          statusEl.textContent = `❌ Access Denied: Invalid card`;
           scanBtn.disabled = false;
           return;
         }
