@@ -531,7 +531,7 @@
         const normalizedAllowed = normalizeSerialNumber(ALLOWED_SERIAL_NUMBER);
     
         if (normalizedSerial !== normalizedAllowed) {
-          statusEl.textContent = `❌ Access Denied: Invalid Ring`;
+          statusEl.textContent = `❌ Access Denied: Invalid card (Serial: ${serialNumber || 'unknown'})`;
           scanBtn.disabled = false;
           return;
         }
